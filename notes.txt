@@ -1,0 +1,45 @@
+What is react native?
+-------------------------
+- With React.js and react native you can build real world native mobile apps for IOS and Android.
+- React.js is a library that is independent from React native.
+- React.js is a javascript library for building user interfaces and it is typically used for web developement.
+- BUT it's actually React-dom that adds the web support to React.
+- React.js is platform agnostic, which means (doesn't care about the underlying platform):
+  - You can use React in conjunction with React-dom to work on web apps.
+- React.js just gives you tools to manage state and building component trees and then you'll need and extra library React-dom 
+  to show the results that React has produced to an actual browser.
+- React native is basically an alternative to React-DOM.
+  - React native gives you a collection of special react components that you can use in your JSX code.
+  - Those components are then compiled to native ui elements for the IOS and Android platforms.
+  - It exposes native platform APIs like using the device camera, so that you can use such features in your javascript code.
+  - In the end react native is just like react-dom instead of web it targets IOS and Android
+
+A glance under the hoof of react native
+---------------------------------------
+- Views are compiled (i.e the JSX code/components - not the javascript logic)
+- The JSX components are compiled into native elements for the respective platforms.
+- What happens to the javascript logic you write outside of the JSX.
+  - Unlike the UI, the logic is not compiled.
+  - That javascript is running on a JS thread, hosted by react native (in the app)
+  - React native basically spins up a simple javascript process as part of your native app that is being built and 
+    it allows this process to talk to the underlying native platform.
+  - Therefore your javascript code  will run as javascript in the native app that's being built, but it will then be talking to the underlying android/IOS platform 
+    through a basic translation bridge that is provided by react native as part of your native app.
+
+Expo CLI vs React Native CLI
+----------------------------
+- Expo CLI
+----------
+  - It is a third party service that you can use.
+  - You get a managed app development work flow, which means - creating projects is easy, writting code is a bit easier, 
+    tapping into native device functionalities (camera) is easier.
+  - You can leave the Expo ecosystem any time and port over to React Native CLI
+
+- React Native CLI
+------------------
+  - Was created by the React Naative team & community.
+  - Bare bones development (you need to do more config and setup on your own).
+  - Less convenience features.
+  - More work to tap into device functionalities.
+  - Easier to integrate with Native source code (if you must mix native device source code and javascript code)
+    - Might not be an advantage as this is not what react native is aiming to do (but it is possible)
