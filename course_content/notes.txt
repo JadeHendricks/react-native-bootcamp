@@ -43,3 +43,12 @@ Expo CLI vs React Native CLI
   - More work to tap into device functionalities.
   - Easier to integrate with Native source code (if you must mix native device source code and javascript code)
     - Might not be an advantage as this is not what react native is aiming to do (but it is possible)
+
+Folder structure (auth) && [query]
+----------------------------------
+- (auth)
+  - If you put a folder in parenthesis it allows you add additional pages/screens in it with a special layout.
+  - In our case, we are using a different layout for auth, because if the user is not logged in, we don't want to show them our navigation bar.
+- [query]
+  - This is a concept known as a dynamic route.
+  - This will allow us to rename the page or get the query information for a specific "search" a user is trying to do (in our case).
